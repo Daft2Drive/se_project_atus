@@ -1,0 +1,19 @@
+.header {
+
+}
+
+.header__image {
+
+}
+
+@media screen and (max-width:882px) {
+    .header{
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 27px;
+    }
+}
+
+.profile__image-container {
+    
+}

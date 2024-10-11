@@ -1,0 +1,33 @@
+.cards__list {
+    display: grid;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 282px;
+}
+
+.card__title {
+    margin: 0;
+}
+
+.card__image {
+
+}
+
+.card__description {
+
+}
+
+.card__like-button {
+
+}
+
+.card__like-button:hover {
+
+}

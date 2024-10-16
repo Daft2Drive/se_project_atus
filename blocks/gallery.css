@@ -1,0 +1,26 @@
+.gallery {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.gallery__cards {
+    padding: 0;
+    display: grid;
+    grid-gap: 20px 17px;
+    margin: 51px 0 67px;
+    list-style-type: none;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 282px);
+}
+
+@media screen and (max-width: 660px) {
+    .gallery {
+        padding: 36px 0 0px;
+        max-width: 282px;
+    }
+
+    .gallery__cards {
+        margin: 0;
+        max-width: 282px;
+        grid-template-columns: 1fr;
+    }
+}

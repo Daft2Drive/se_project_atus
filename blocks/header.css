@@ -1,19 +1,26 @@
 .header {
-
+    max-width: 880px;
+    margin-bottom:  39px;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
-.header__image {
-
+.header__logo {
+    height: 33px;
+    width: 173px;
+    padding: 45px 0 41px;
+    max-width: 100%;
 }
 
-@media screen and (max-width:882px) {
+@media screen (min-width: 320px) and (max-width:660px) {
     .header{
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 27px;
+        margin: 0;
+        width: 100%;
+        max-width: 660px;
     }
-}
 
-.profile__image-container {
-    
+    .header__logo {
+        height: 24px;
+        width: 100%;
+        padding: 28px 0 32px 27px;
+    }
 }

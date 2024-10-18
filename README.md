@@ -14,4 +14,6 @@ This is the third project of the Software Engineering program at TripleTen. It w
 ## Links
 
 - Github Pages - [Around the US](https://daft2drive.github.io/se_project_atus/)
-- Google Drive - Video for the project
+- Google Drive - [Video] (https://drive.google.com/file/d/1sDQIWaKjjlW_927xv-dvqrz-01xVEXWL/view?usp=sharing)
+
+Thanks :)

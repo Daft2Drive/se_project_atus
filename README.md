@@ -11,21 +11,7 @@ This is the third project of the Software Engineering program at TripleTen. It w
 - A custom form
 - CSS animation and transform
 
-## Plan on improving the project
+## Links
 
-Add your ideas here :)
-
-    Spiral staircase (らせん階段 Rasen Kaidan)
-    Rhinoceros beetleW (カブト虫 Kabutomushi)
-    Desolation RowW (廃墟の街 Haikyo no machi)
-    Fig tart (イチジクのタルト Ichijiku no taruto)
-    Rhinoceros beetle (カブト虫 Kabutomushi)
-    Via Dolorosa (ドロローサへの道 Dororōsa e no michi)
-    Rhinoceros beetle (カブト虫 Kabutomushi)
-    Singularity point (特異点 Tokuiten)
-    Giotto (ジョット Jotto)
-    Angel (天使 Enjeru)
-    Hydrangea (紫陽花 Ajisai)
-    Rhinoceros beetle (カブト虫 Kabutomushi)
-    Singularity point (特異点 Tokuiten)
-    Secret emperor (秘密の皇帝 Himitsu no Kōtei)
+- Github Pages - [Around the US](https://daft2drive.github.io/se_project_atus/)
+- Google Drive - Video for the project

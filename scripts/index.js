@@ -112,11 +112,40 @@ function getCardElement(cardData) {
 ///*                                    Event Handlers                                           *///
 ///*---------------------------------------------------------------------------------------------*///
 
-function handleProfileEditSubmit (e) {
+function handleProfileEditSubmit(e) {
     e.preventDefault();
     profileTitle.textContent = profileTitleInput.value;
     profileDescription.textContent = profileDescriptionInput.value;
-    closePopup();
+    closePopup(profileEditModal);
+}
+
+function handleAddCardFormSubmit(e) {
+    e.preventDefault();
+    const name = cardTitleInput.value;
+    const link = cardLinkInput.value;
+    renderCard({name, link}, cardsWrap);
+    e.target.reset();
+    closePopup(addCardModal);
+}
+
+function handleOverlayClick(event) {
+    if (event.target.classList.contains('modal_open')) {
+        closePopup(event.target);
+    }
+}
+
+const modals = document.querySelectorAll('.modal');
+modals.forEach((modal) => {
+    modal.addEventListener('click', handleOverlayClick);
+});
+
+function handleEscKey(event) {
+    if (event.key === 'Escape') {
+        const openModal = document.querySelector('.modal_open');
+        if (openModal) {
+            closePopup(openModal);
+        }
+    }
 }
 
 ///*---------------------------------------------------------------------------------------------*///

@@ -1,26 +1,25 @@
 .page {
-    color: #fff;
-    margin: 0 auto;
-    max-width: 1280px;
+    background: #000;
+  }
+  
+  .page__content {
+    padding: 0 20px;
+    background-color: black;
     min-height: 100vh;
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    background-color: #000;
-}
-
-.page__content {
-    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: flex;
-    margin: 0 auto;
-    max-width: 880px;
     flex-direction: column;
-}
-
-.page__section {
+    /* It's about time to tell students about sticky footer (in "Could be improved") */
+  }
+  
+  .page__section {
     width: 100%;
-    margin: 0 auto;
+    max-width: 882px;
+    box-sizing: border-box;
     position: relative;
-    max-width: 880px;
-}
+    margin: 0 auto;
+  }
 
 @media screen and (min-width: 661px) and (max-width: 919px) {
     .page__content {

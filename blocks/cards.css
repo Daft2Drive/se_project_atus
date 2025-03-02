@@ -1,12 +1,20 @@
-.cards {
-    margin-top: 30px;
-}
-
-.cards__list {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-gap: 20px 17px;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, 282px);
-}
+    .cards {
+        font-family: "Inter", Arial, sans-serif;
+        padding: 15px 0 36px;
+      }
+      
+      .cards__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 282px);
+        justify-content: center;
+        grid-gap: 20px 18px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      @media screen and (max-width: 568px) {
+        .cards {
+          padding: 15px 0 18px;
+        }
+      }

@@ -1,14 +1,33 @@
 .header {
-    max-width: 880px;
+    display: flex;
+    align-items: center; 
+    flex-shrink: 0;
+    max-width: 1280px;
+    min-height: 120px;
     margin-bottom:  39px;
+    font-family: "Inter", Arial, sans-serif;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
-}
-
-.header__logo {
-    height: 33px;
+  }
+  
+  .header::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    opacity: 0.7;
+    background: #545454;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* To be centered. Students know about translate */
+    bottom: 0;
+  } 
+  
+  /* The best solution is shown here - suggest it in "Could be improved" */
+  
+  .header__logo {
     width: 173px;
-    padding: 45px 0 41px;
-    max-width: 100%;
+    height: 33px;
+    object-fit: contain;
 }
 
 @media screen and (min-width: 320px) and (max-width:660px) {

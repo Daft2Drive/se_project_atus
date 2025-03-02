@@ -22,13 +22,13 @@
           <img src="./images/jacques-cousteau.jpg" class="profile__image" alt="Avatar of Jacques-Cousteau" />
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
-            <button class="profile__edit-button" type="button" aria-label="edit profile"></button>
+            <button class="profile__edit-button" type="button" id="profile-edit-button"></button>
             <p class="profile__description">Explorer</p>
           </div>
           <button class="profile__add-button" type="button" aria-label="Add images"></button>
         </section>
-        <section class="gallery page__section">
-          <ul class="gallery__cards">
+        <section class="cards page__section">
+          <ul class="cards__list">
             <li class="card">
               <img src="images/yosemite.jpg" class="card__image" alt="Yosemite Valley"/>
               <div class="card__description">
@@ -78,6 +78,28 @@
       <footer class="footer">
         <p class="footer__copyright">&copy; 2024 Around the U.S.</p>
       </footer>
+    </div>
+  
+    <div class="modal" id="profile-edit-modal">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <h3 class="modal__title">Edit Profile</h3>
+        <form class="modal__form">
+          <input 
+            class="modal__input"
+            name="name"
+            placeholder="Name"
+            type="text"
+          />
+          <input
+            class="modal__input"
+            name="description"
+            placeholder="Description"
+            type="text"
+          /> 
+        <button class="button modal__button" type="submit">Save</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

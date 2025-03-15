@@ -1,8 +1,10 @@
 .footer {
-    max-width: 880px;
-    padding-bottom: 60px;
-    position: sticky;
-}
+    max-width: 882px; /* Matches cards and header */
+    margin: 0 auto;
+    padding: 20px 0;
+    font-family: "Inter", Arial, sans-serif;
+    text-align: center; /* Centers the copyright text */
+  }
 
 .footer__copyright {
     margin: 0;
@@ -27,6 +29,8 @@
 
 @media screen and (max-width: 660px) {
     .footer {
+        max-width: 100%;
+        padding: 20px 15px;
         margin: 0 19px;
     }
 

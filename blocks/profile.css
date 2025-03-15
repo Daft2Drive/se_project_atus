@@ -1,8 +1,9 @@
 .profile {
-    display: flex;
-    align-items: center;
-  }
-  
+  display: flex;
+  align-items: center;
+  background-color: #000000; /* Add this if it’s the intended black background */
+}
+
   .profile__info {
     display: grid;
     column-gap: 18px;
@@ -21,6 +22,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: #ffffff; /* Add this to make text white */
   }
   
   .profile__description {
@@ -33,8 +35,9 @@
     grid-area: description;
     text-overflow: ellipsis;
     font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: #ffffff; /* Add this */
   }
-  
+
   .profile__image {
     width: 100%;
     max-width: 120px;
@@ -94,6 +97,7 @@
       font-size: 22px;
       line-height: 1.2;
       max-width: 196px;
+      color: #ffffff; /* Ensure it stays white on mobile */
     }
   
     .profile__edit-button {
@@ -114,12 +118,13 @@
     }
   
     .profile__description {
-      font-size: 14px;
-      line-height: 1.21;
-      margin-top: 14px;
-      max-width: 282px;
-      text-align: center;
-    }
+    font-size: 14px;
+    line-height: 1.21;
+    margin-top: 14px;
+    max-width: 282px;
+    text-align: center;
+    color: #ffffff; /* Ensure it stays white */
+  }
   
     .profile__add-button {
       width: 100%;

@@ -1,6 +1,8 @@
 .profile {
   display: flex;
   align-items: center;
+  padding-top: 40px;
+  margin-bottom: 47px;
   background-color: #000000; /* Add this if it’s the intended black background */
 }
 
@@ -14,9 +16,9 @@
   
   .profile__title {
     grid-area: title;
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 500;
-    line-height: 48px;
+    line-height: 1.14;
     margin: 0 0 7px;
     overflow: hidden;
     white-space: nowrap;
@@ -31,7 +33,7 @@
     font-weight: 400;
     overflow: hidden;
     white-space: nowrap;
-    line-height: 21.78px;
+    line-height: 1.22;
     grid-area: description;
     text-overflow: ellipsis;
     font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -53,7 +55,7 @@
     margin-right: 20px;
     border: 1px solid #fff;
     transition:  opacity 0.2s ease-in-out;
-    background: transparent url(../images/Edit-Button.svg) center no-repeat;
+    background: transparent url(../images/edit-button.svg) center no-repeat;
   }
   
   .profile__edit-button:hover {
@@ -68,7 +70,7 @@
     border-radius: 2px;
     border: 2px solid #fff;
     transition: opacity 0.2s ease-in-out;
-    background: transparent url(../images/Add-button.svg) center no-repeat;
+    background: transparent url(../images/add-button.svg) center no-repeat;
   }
   
   .profile__add-button:hover {

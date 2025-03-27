@@ -35,7 +35,7 @@
               <img src="" alt="" class="card__image"/>
               <div class="card__content">
                 <h2 class="card__title"></h2>
-                <button class="card__button" type="button"></button>
+                <button class="card__like-button" type="button"></button>
               </div>
             </li>
           </template>
@@ -44,7 +44,7 @@
       </main>
 
       <footer class="footer page__section">
-        <p class="footer__copyright">&copy; 2024 Around the U.S.</p>
+        <p class="footer__copyright">&copy; 2025 Around the U.S.</p>
       </footer>
     </div>
 
@@ -54,24 +54,24 @@
         <button class="modal__close" type="button" id="profile-close-modal"></button>
         <p class="modal__heading">Edit profile</p>
         <form class="modal__form">
-          <label class="modal__label">
+          <label class="modal__label" for="title-name-input">
           <input 
             class="modal__input"
-            placeholder="Name"
+            placeholder="Jacques Cousteau"
             type="text"
-            id="profile-title-input"
+            id="title-name-input"
             minlength="2"
             maxlength="40"
             required
           />
           <span class="modal__error" id="profile-name-input-error"></span>
           </label>
-          <label class="modal__label">
+          <label class="modal__label" for="description-text-input">
           <input
             class="modal__input"
-            placeholder="Description"
+            placeholder="Explorer"
             type="text"
-            id="profile-description-input"
+            id="description-text-input"
             minlength="2"
             maxlength="200"
             required
@@ -111,31 +111,10 @@
             /> 
             <span class="modal__error" id="card-image-url-input-error"></span>
           </label>
-          <button class="button modal__button" type="submit">Add</button>
+          <button class="modal__submit-button" type="submit">Add</button>
           </form>
         </div>
-    </div>
-
-    <!--Preview modal-->
-    <div class="modal" id="image-preview-modal">
-      <div class="modal__container">
-        <button class="modal__close" id="image-preview-close"></button>
-        <img class="modal__preview-image" src="" alt="" />
-        <h3 class="modal__preview-title"></h3>
       </div>
-    </div>
-      <template id="card-template">
-        <li class="card">
-          <img src="" class="card__image" alt=""/>
-          <div class="card__description">
-            <h2 class="card__title"></h2>
-            <button class="card__like-button" type="button" aria-label="like this post"></button>
-          </div>
-        </li>
-      </template> 
-
-    <!--Script-->
     <script defer src="./scripts/index.js"></script>
-    <script defer src="./scripts/validation.js"></script>
   </body>
 </html>

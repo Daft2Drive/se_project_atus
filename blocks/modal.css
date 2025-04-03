@@ -117,6 +117,7 @@
     cursor: pointer;
     border-radius: 2px;
     background-color: black;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 .modal__button:hover {

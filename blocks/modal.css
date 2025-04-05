@@ -36,7 +36,7 @@
     font-family: "Inter", Arial, sans-serif;
 }
 
-.modal__opened {
+.modal_opened {
     opacity: 1;
     display: flex;
     visibility: visible;

@@ -41,13 +41,13 @@ const profileDescription = document.querySelector('.profile__description');
 
 // Open Modal
 function openModal() {
-    modal.classList.add('modal__opened');
+    modal.classList.add('modal_opened');
     document.addEventListener('keydown', handleEscKey);
 }
 
 // Close Modal
 function closeModal() {
-    modal.classList.remove('modal__opened');
+    modal.classList.remove('modal_opened');
     document.removeEventListener('keydown', handleEscKey);
 }
 
@@ -85,6 +85,14 @@ function handleProfileFormSubmit(evt) {
     closeModal();
 }
 
+function generateCard(item) {
+    cards.forEach((card) => {
+        const cardClone = generateCard(card);
+        cardsList.appendChild(cardClone);
+    return cardElement(initialCards)
+    }    
+)};
+
 // Initialize the page with the initial cards
 renderCards(initialCards);
 
@@ -95,13 +103,6 @@ profileCloseModal.addEventListener("click", closeModal);
 modal.addEventListener("click", (event) => {
     if (event.target === modal) {
         closeModal();
-    }
-});
-
-// Add event listener to the card button (like button)
-cardsList.addEventListener("click", (event) => {
-    if (event.target.classList.contains("card__button")) {
-        event.target.classList.toggle("card__button_active");
     }
 });
 

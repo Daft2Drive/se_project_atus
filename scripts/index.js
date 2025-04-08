@@ -41,6 +41,10 @@ const profileDescription = document.querySelector('.profile__description');
 
 // Open Modal
 function openModal() {
+    // Pre-fill inputs with current profile info
+    nameInput.value = profileTitle.textContent;
+    descriptionInput.value = profileDescription.textContent;
+
     modal.classList.add('modal_opened');
     document.addEventListener('keydown', handleEscKey);
 }
@@ -60,18 +64,10 @@ function handleEscKey(event) {
 
 // Render Cards
 function renderCards(cards) {
-    cardsList.innerHTML = ''; // Clear the cards list before rendering
+    cardsList.innerHTML = ''; // Clear existing cards
     cards.forEach((card) => {
-        const cardClone = cardTemplate.content.cloneNode(true);
-        const cardImage = cardClone.querySelector('.card__image');
-        const cardTitle = cardClone.querySelector('.card__title');
-        const cardButton = cardClone.querySelector('.card__button');
-
-        cardImage.src = card.link;
-        cardImage.alt = card.name;
-        cardTitle.textContent = card.name;
-       // cardButton.textContent = 'Like'; // Customize the button text if needed
-        cardsList.appendChild(cardClone);
+        const cardElement = generateCard(card);
+        cardsList.appendChild(cardElement);
     });
 }
 
@@ -85,13 +81,17 @@ function handleProfileFormSubmit(evt) {
     closeModal();
 }
 
-function generateCard(item) {
-    cards.forEach((card) => {
-        const cardClone = generateCard(card);
-        cardsList.appendChild(cardClone);
-    return cardElement(initialCards)
-    }    
-)};
+function generateCard(cardData) {
+    const cardClone = cardTemplate.content.cloneNode(true);
+    const cardImage = cardClone.querySelector('.card__image');
+    const cardTitle = cardClone.querySelector('.card__title');
+    const cardButton = cardClone.querySelector('.card__button');
+
+    cardImage.src = cardData.link;
+    cardImage.alt = cardData.name;
+    cardTitle.textContent = cardData.name;
+    return cardClone;
+}
 
 // Initialize the page with the initial cards
 renderCards(initialCards);

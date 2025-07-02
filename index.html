@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="An interactive page where users can add and remove photos, like photos of other users, and make a few minor adjustments to their own profile." />
@@ -11,112 +11,118 @@
     <link rel="shortcut icon" href="favicon.ico" />
   </head>
 
-  <body class="page">
-    <div class="page__content">
-      <header class="header page__section">
-        <img src="./images/image.svg" class="header__logo" alt="the U.S logo" />
-      </header>
+<body class="page">
+  <div class="page__content">
+    <header class="header">
+      <img src="./images/image.svg" alt="Around the U.S. logo" class="header__logo" />
+    </header>
 
-      <main class="content">
-        <section class="profile page__section">
-          <img src="./images/jacques-cousteau.png" class="profile__image" alt="Avatar of Jacques-Cousteau" />
-          <div class="profile__info">
-            <h1 class="profile__title">Jacques Cousteau</h1>
-            <button class="profile__edit-button" type="button" id="profile-edit-button"></button>
-            <p class="profile__description">Explorer</p>
-          </div>
-          <button class="profile__add-button" type="button" aria-label="Add images"></button>
-        </section>
+    <main class="page__section">
+      <section class="profile">
+        <img src="./images/jacques-cousteau.png" alt="Jacques Cousteau" class="profile__image" />
+        <div class="profile__info">
+          <h1 class="profile__title">Jacques Cousteau</h1>
+          <button class="profile__edit-button" type="button" aria-label="Edit profile"></button>
+          <p class="profile__description">Explorer</p>
+        </div>
+        <button class="profile__add-button" type="button" aria-label="Add card"></button>
+      </section>
 
-        <section class="cards page__section">
-          <ul class="cards__list">
-          <template id="card-template">
-            <li class="card">
-              <img src="" alt="" class="card__image"/>
-              <div class="card__content">
-                <h2 class="card__title"></h2>
-                <button class="card__like-button" type="button"></button>
-              </div>
-            </li>
-          </template>
-          </ul>
-        </section>
-      </main>
+      <section class="cards">
+        <ul class="cards__list"></ul>
+      </section>
+    </main>
 
-      <footer class="footer page__section">
-        <p class="footer__copyright">&copy; 2025 Around the U.S.</p>
-      </footer>
-    </div>
+    <footer class="footer">
+      <p class="footer__copyright">© 2025 Around the U.S.</p>
+    </footer>
 
-  <!--Edit modal-->
-    <div class="modal" id="profile-edit-modal">
+    <template id="card-template">
+      <li class="card">
+        <img class="card__image" src="#" alt="" />
+        <button class="card__delete-button" type="button" aria-label="Delete card"></button>
+        <div class="card__content">
+          <h2 class="card__title"></h2>
+          <button class="card__like-button" type="button" aria-label="Like"></button>
+        </div>
+      </li>
+    </template>
+
+    <section class="modal modal_type_edit-profile">
       <div class="modal__container">
-        <button class="modal__close" type="button" id="profile-close-modal"></button>
-        <p class="modal__heading">Edit profile</p>
-        <form class="modal__form">
-          <label class="modal__label" for="title-name-input">
-          <input 
-            class="modal__input modal__input_type_name"
-            name="name"
-            placeholder="Your name"
-            type="text"
-            id="title-name-input"
-            minlength="2"
-            maxlength="40"
-            required
-          />
-          <span class="modal__error" id="profile-name-input-error"></span>
-          </label>
-          <label class="modal__label" for="description-text-input">
-          <input
-            class="modal__input modal__input_type_description"
-            name="description"
-            placeholder="Your job"  
-            type="text"
-            id="description-text-input"
-            minlength="2"
-            maxlength="200"
-            required
-          />
-          <span class="modal__error" id="profile-description-input-error"></span>
-          </label>
-        <button class="button modal__button" type="submit">Save</button>
-        </form>
-      </div>
-    </div>
-
-  <!--Add card modal-->
-      <div class="modal" id="card-add-modal">
-        <div class="modal__container">
-          <button class="modal__close" id="add-card-form"></button>
-          <h3 class="modal__heading">Add Image</h3>
-          <form class="modal__form">
-            <label class="modal__label">
-            <input 
-              class="modal__input"
-              name="title"
-              placeholder="Title"
+        <h2 class="modal__heading">Edit profile</h2>
+        <form class="modal__form" novalidate>
+          <label class="modal__label">
+            <input
               type="text"
+              name="name"
+              class="modal__input modal__input_type_name"
+              placeholder="Name"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+            <span class="modal__error" id="name-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              type="text"
+              name="description"
+              class="modal__input modal__input_type_description"
+              placeholder="About me"
+              required
+              minlength="2"
+              maxlength="200"
+            />
+            <span class="modal__error" id="description-error"></span>
+          </label>
+          <button type="submit" class="modal__button">Save</button>
+        </form>
+        <button class="modal__close" type="button" aria-label="Close"></button>
+      </div>
+    </section>
+
+    <section class="modal modal_type_add-card">
+      <div class="modal__container">
+        <h2 class="modal__heading">New Place</h2>
+        <form class="modal__form" novalidate>
+          <label class="modal__label">
+            <input
+              type="text"
+              name="title"
+              class="modal__input modal__input_type_title"
+              placeholder="Title"
+              required
               minlength="2"
               maxlength="30"
+            />
+            <span class="modal__error" id="title-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              type="url"
+              name="url"
+              class="modal__input modal__input_type_url"
+              placeholder="Image URL"
               required
             />
-            <span class="modal__error" id="card-title-input-error"></span>
-            </label>
-            <label class="modal__label">
-            <input
-              class="modal__input"
-              name="image-url"
-              placeholder="Image URL"
-              type="url"
-              required
-            /> 
-            <span class="modal__error" id="card-image-url-input-error"></span>
+            <span class="modal__error" id="url-error"></span>
           </label>
-          <button class="modal__submit-button" type="submit">Add</button>
-          </form>
-        </div>
+          <button type="submit" class="modal__button">Add</button>
+        </form>
+        <button class="modal__close" type="button" aria-label="Close"></button>
       </div>
-    <script defer src="./scripts/index.js"></script>
-  </body>
+    </section>
+
+    <section class="modal modal_type_preview">
+      <div class="modal__container-preview">
+        <img class="modal__preview-img" src="#" alt="" />
+        <h2 class="modal__preview-title"></h2>
+        <button class="modal__close" type="button" aria-label="Close"></button>
+      </div>
+    </section>
+  </div>
+
+  <script src="/scripts/index.js"></script>
+</body>
 </html>

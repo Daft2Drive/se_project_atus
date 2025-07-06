@@ -111,7 +111,7 @@ function handleAddCardFormSubmit(evt) {
 
 // Generate Card
 function generateCard(cardData) {
-  const cardClone = cardTemplate.content.cloneNode(true);
+  const cardClone = cardTemplate.content.querySelector(".card").cloneNode(true);
   const cardImage = cardClone.querySelector('.card__image');
   const cardTitle = cardClone.querySelector('.card__title');
   const cardLikeButton = cardClone.querySelector('.card__like-button');

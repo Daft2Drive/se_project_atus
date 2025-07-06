@@ -63,11 +63,13 @@
 }
 
 .modal__preview-title {
+    color: white;
     font-size: 12px;
     font-weight: 400;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 .modal__close {
     width: 40px;
@@ -157,5 +159,6 @@
         margin-bottom: 13px;
         left: calc(100% - 35px);
         bottom: calc(100% + 5px);
+        background-size: 26px 26px;
     }
 }
